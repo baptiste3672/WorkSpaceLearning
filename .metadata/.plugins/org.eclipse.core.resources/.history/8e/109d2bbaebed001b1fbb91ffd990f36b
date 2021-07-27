@@ -1,0 +1,17 @@
+package fr.baptiste.perimetre;
+
+public class fontions {
+	
+	public static void main(String [] parametre)
+	{
+		int a;
+		a = calculer(0);
+	}
+	
+	public static int calculer (int x)
+	{
+		int resultat;
+		resultat = -x * x + 3 * x - 2;
+		return resultat;
+	}
+}

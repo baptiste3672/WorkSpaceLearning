@@ -1,0 +1,18 @@
+package fr.baptiste.perimetre;
+
+import java.util.Scanner;
+
+public class CompteBancaire {
+	
+	public static void main(String[] args)
+	{
+		
+	}
+	
+	public static char menuPrincipal()
+	{
+		char c;
+		Scanner lectureClavier = new Scanner(System.in);
+		System.out.println("-----------------------Menu principal-----------------------");
+	}
+}

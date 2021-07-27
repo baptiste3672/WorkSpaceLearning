@@ -1,0 +1,33 @@
+package fr.baptiste.perimetre;
+
+import java.util.Scanner;
+
+public class CompteBancaire {
+	
+	public static void main(String[] args)
+	{
+		int a = 0;
+		a = menuPrincipal();
+		System.out.println("a : " + a);
+		sortir(;)
+	}
+	
+	public static int menuPrincipal()
+	{
+		int c = 0;
+		Scanner lectureClavier = new Scanner(System.in);
+		System.out.println("-----------------------Menu principal-----------------------");
+		System.out.println("1. Retirer de l'argent");
+		System.out.println("2. Aller voir son Solde Bancaire");
+		System.out.println("3. Appeller l'assistance Bancaire");
+		System.out.print("\nRentrez votre choix : ");
+		c = lectureClavier.nextInt();
+		return c;
+	}
+	
+	public static void sortir()
+	{
+		System.out.println("Merci d'avoir utilisé nos services.");
+		System.out.println("A bientôt");
+	}
+}
