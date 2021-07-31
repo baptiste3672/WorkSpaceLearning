@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CompteBancaire {
 	
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		int a = 0, date;
 		long numeroCompte;
@@ -51,7 +51,7 @@ public class CompteBancaire {
 		}
 	}
 	
-	public static int menuPrincipal() 
+	public static int menuPrincipal() throw Exeption 
 	{
 		int c = 0;
 		Scanner sc = new Scanner(System.in);
