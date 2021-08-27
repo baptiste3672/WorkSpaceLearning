@@ -1,0 +1,11 @@
+package fr.baptiste.perimetre;
+
+public class Exercice {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Veillez saisir une phrase :");
+	}
+
+}
