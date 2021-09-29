@@ -7,47 +7,35 @@ public class CompteBancaire {
 	public static void main(String[] args) 
 	{
 		int a = 0, date;
-		long numeroCompte;
 		double valeur;
-		char theme, typeDeCompte, moyenPaiement;
+		char theme, moyenPaiement;
+		String typeDeCompte = null, numeroCompte;
+		Compte compte = new Compte();
+		LigneComptable ligneComptable = new LigneComptable();
 		Scanner lectureClavier = new Scanner(System.in);
-		a = menuPrincipal();
-		switch(a)
-		{
-			case 1:
-				System.out.println("------------------------------------------------------------");
-				System.out.println("Type du compte [Types possibles : courant, joint, épargne] :");
-				System.out.println("Numero du compte : ");
-				System.out.println("Première valeur creditée : ");
-				System.out.println("Taux de placement : ");
-				System.out.println("------------------------------------------------------------");
-				break;
-			case 2:
-				System.out.println("------------------------------------------------------------");
-				System.out.println("Saisissez le numéro du compte : ");
-				numeroCompte = lectureClavier.nextLong();
-				if(numeroCompte == 332991219)
-				{
-					System.out.println("------------------------------------------------------------");
-					System.out.println("Solde : 365\u20AC");
-				}else {
-					System.out.println("------------------------------------------------------------");
-					System.out.println("Code erroné !");
-				}
-				break;
-			case 3:
-				System.out.println("------------------------------------------------------------");
-				System.out.println("Option non programmée.");
-				sortir();
-				break;
-			case 4:
-				sortir();
-				break;
-			case 5:
-				alAide();
-				break;
-			default:
-				System.out.println("\nERROR SAISIE INVALID");
+		while (true) {
+			a = menuPrincipal();
+			switch(a)
+			{
+				case 1:
+					compte.creerCpte();
+					break;
+				case 2:
+					compte.afficherCpte();
+					break;
+				case 3:
+					ligneComptable.getCréerLigneComptable();
+					sortir();
+					break;
+				case 4:
+					sortir();
+					break;
+				case 5:
+					alAide();
+					break;
+				default:
+					System.out.println("\nERROR SAISIE INVALID");
+			}
 		}
 	}
 	
@@ -86,6 +74,7 @@ public class CompteBancaire {
 		System.out.println("Merci d'avoir utilisé nos services.");
 		System.out.println("A bientôt");
 		System.out.println("------------------------------------------------------------");
+		System.exit(-1);
 	}
 	
 	public static void alAide()
